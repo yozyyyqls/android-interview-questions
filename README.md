@@ -72,6 +72,20 @@ Android Interview Questions:
 #### Base
 
 * **Why does an Android App lag?** - [Learn from here](https://amitshekhar.me/blog/android-app-lag)
+	1. The GC is running frequently.
+		- The time for which the GC is running the actual app is not running.
+		- The Android app updates UI every `16ms` for smooth UI redenring. If the GC runs for more time, the app will be unabled to update the UI in time and will skip a few frames, so it seems that the app is lagging.
+		- If the object allocation and deallocation occur on the regular basis, it means that the GC will run on a regular basis to realese memory.
+	2. Do a lot of work on the main thread.
+		- Basically, the system tries to redraw the UI every `16ms`.
+		- If our task on the main thread takes more than 16ms, such as 26ms. Then the system tries to updates the UI but it wasn't ready. It will not refresh anything. There will be a **frame drop**.
+- **How to avoid the Android app lagging issue?**
+	1. Reduce the GC running time.
+		- Do not allocate any object if it's not required.
+		- Use the concept of object pools to reuse the memory.
+		- Do not leak contexts in inner classes.
+	2. Do not do so much work on the main thread.
+		- Transfer the heavy work to the background thread.
 
 * **What is `Context`? How is it used?** - [Context In Android Application](https://amitshekhar.me/blog/context-in-android-application)
 
