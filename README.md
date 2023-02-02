@@ -64,6 +64,7 @@
 * [Jetpack Compose](#jetpack-compose)
 * [Other Topics](#other-topics)
 * [Data Structures and Algorithms](#data-structures-and-algorithms)
+* [Design Pattern](#design-pattern)
 
 ### Core Android
 
@@ -88,6 +89,16 @@ Android Interview Questions:
 		- Transfer the heavy work to the background thread.
 
 * **What is `Context`? How is it used?** - [Context In Android Application](https://amitshekhar.me/blog/context-in-android-application)
+	1. What is `Context`?
+		* `Context` is an interface to global information about an application environment.
+		* It is context of the current state of the application.
+		* It can be used to get information regarding the application and activity.
+		* It can be used to get access to resources, databases, and shared preferences, and etc.
+		* Both the `Application` and `Activity` classes extend the `Context` class.
+	2. How to use it?
+		- There're mainly two types of `Context`:
+			- **Application Context**: It is an application and we are present in the application.
+			- **Activity Context**: It is an activity and we are present in the activity.
 
 * **Tell all the Android application components.** - [Learn from here](https://developer.android.com/guide/components/fundamentals.html#Components)
 
@@ -1265,6 +1276,43 @@ Android Interview Questions:
 ### Data Structures and Algorithms
 
 * **Android Developer should know these Data Structures for Next Interview** - [Check here](https://amitshekhar.me/blog/android-developer-should-know-these-data-structures-for-next-interview)
+
+### Design Pattern
+
+#### Creational Patterns
+
+>These patterns deal with *object creation machanisms*, trying to create objects in a manner suitable to the situation.
+
+- **Factory Method**
+- **Abstract Factory**
+- **Singleton**
+- **Builder**
+- **Prototype**
+
+#### Structure Patterns
+
+> These patterns deal with *object composition*, creating *relationships* between objects to form large structures.
+
+- **Adapter**
+- **Bridge**
+- **Decorator**
+- **Composite**
+- **Facade**
+
+#### Behavioural Patterns
+
+>These patterns deal with *communication between objects*, what goes on between objects and how they operate together.
+
+- **Chain of Responsibility**
+- **Command**
+- **Interpreter**
+- **Iterator**
+- **Observer**
+- **State**
+- **Strategy**
+- **Template Method**
+- **Visitor**
+
 
 ### Found this project useful :heart:
 
